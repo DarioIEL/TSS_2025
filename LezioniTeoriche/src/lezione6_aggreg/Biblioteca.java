@@ -14,7 +14,17 @@ public class Biblioteca {
 	}
 	
 	public void addLibro(Libro libro) {
-		this.libri.add(libro);
+		libri.add(libro);
+	}
+	
+	/**
+	 * Questo metodo serve ad aggiungere più libri contemporaneamente 
+	 * @param libri: Libro[]
+	 */
+	public void addLibri(Libro[] libri) {
+		for (Libro libro : libri) {
+			this.libri.add(libro);
+		}
 	}
 	
 	public void stampaListaLibri() {

@@ -6,10 +6,16 @@ import java.util.List;
 public class Casa {
 
 	String indirizzo;
+	//CLASsi Wrapper
+	Integer numCivico;
+	Double lunghezzaVia;
+	Boolean presenza;
+	
 	List<Stanza> stanze = new ArrayList<Stanza>();
 	
 	public Casa(String indirizzo) {
 		this.indirizzo = indirizzo;
+
 	}
 	
 	public void aggiungiStanza(Stanza stanza) {
