@@ -27,14 +27,19 @@ public class Playlist {
 			//il primo lo aggiunge sempre
 			brani.add(brano);
 		}else {
+			
+			boolean giaEsiste = false;
+			
 			for (Brano branoInPL : brani) {
-				if(branoInPL.compareTo(brano) == 0) {
+				if (branoInPL.compareTo(brano) == 0) {
 					System.out.println("Stai aggiungendo un brano esistente: " + brano);
-					break;
-				}else {
-					this.brani.add(brano);
+					giaEsiste = true;
 					break;
 				}
+			}
+			
+			if(!giaEsiste) {
+				this.brani.add(brano);
 			}
 		}
 	}
@@ -42,7 +47,11 @@ public class Playlist {
 	public void infoPlayList() {
 		System.out.println("Hai scelto la playlist: " + this.nomePL);
 		int spazioDisponibile = 10 - this.brani.size();
-		System.out.println("Hai ancora posto per " + spazioDisponibile + " posti");
+		System.out.println("Hai ancora posto per " + spazioDisponibile + " canzoni");
+		System.out.println("Canzoni inserite");
+		for (Brano brano : brani) {
+			System.out.println(brano);
+		}
 	}
 
 }

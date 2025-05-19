@@ -31,12 +31,9 @@ public class Main {
 		miaPlayList.addBrano(db.getSingoloBrano(0));
 		miaPlayList.addBrano(db.getSingoloBrano(12));
 		miaPlayList.addBrano(db.getSingoloBrano(64));
-		miaPlayList.addBrano(db.getSingoloBrano(0));
-		miaPlayList.addBrano(db.getSingoloBrano(64));
+		miaPlayList.addBrano(db.getSingoloBrano(0)); //già esiste
+		miaPlayList.addBrano(db.getSingoloBrano(64)); //già esiste
 		
-		for (Brano br : miaPlayList.getBrani()) {
-			System.out.println(br);
-		} 
 		
 		miaPlayList.infoPlayList();
 		
