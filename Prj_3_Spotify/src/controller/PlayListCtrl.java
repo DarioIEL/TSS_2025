@@ -1,6 +1,10 @@
 package controller;
 
+
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import model.Brano;
 
@@ -37,6 +41,29 @@ public class PlayListCtrl {
 		}
 	}
 
+	public void caricaCanzoniDaFile() {
+		File fileCanzoni = new File("canzoni.csv");
+		
+		try {
+			Scanner sc = new Scanner(fileCanzoni);
+			
+			while(sc.hasNextLine()) {
+				String riga = sc.nextLine();
+				String[] separate = riga.split(",");
+				String autore = separate[0];
+				String titolo = separate[1];
+				Double durata = Double.parseDouble(separate[2]);
+				
+				Brano brano = new Brano(titolo, autore, durata);
+				this.brani.add(brano);
+			}
+		} catch (FileNotFoundException e) {
+			System.out.println("Non sono stato in grado di trovare il file. Controlla la sua posizione");
+			e.printStackTrace();
+		}
+		
+		
+	}
 
 	public ArrayList<Brano> getBrani() {
 		return brani;

@@ -16,10 +16,13 @@ public class Main {
 //		miaPlayList.addBrano(nuovoBrano);
 //		miaPlayList.addBrano(nuovoBrano2);
 
-		PlayListCtrl database = new PlayListCtrl();
-		database.caricaCanzoni();
-		database.stampaBraniPL();
+//		PlayListCtrl database = new PlayListCtrl();
+//		database.caricaCanzoni();
+//		database.stampaBraniPL();
 		
+		PlayListCtrl db = new PlayListCtrl();
+		db.caricaCanzoniDaFile();
+		db.stampaBraniPL();
 	}
 	
 }
