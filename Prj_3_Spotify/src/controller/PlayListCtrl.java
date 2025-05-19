@@ -1,0 +1,49 @@
+package controller;
+
+import java.util.ArrayList;
+
+import model.Brano;
+
+public class PlayListCtrl {
+
+	private ArrayList<Brano> brani;
+	
+	public PlayListCtrl() {
+		this.brani = new ArrayList<Brano>();
+	}
+	
+	//caricamento manuale
+	public void caricaCanzoni() {
+		String raccolta[] = {
+				"24K;Bruno Mars;3",
+				"Beat It;Michael Jackson;3.5",
+				"DTMF;Bad Bunny;4.1",
+				"Perfect;Ed Sheeran;2.5",
+				"Beautiful people;Maryln Manson;4",
+				"After hour;The Weeknd;4.0",
+				"Californication;RHCP;3.5",
+				"Pika Girl;S3rl;3.9",
+				"Nu jeans e na maglietta;Nino D'Angelo;2.5"
+		};
+		
+		for(String canzone: raccolta) {
+			String[] splitted = canzone.split(";");
+			String titolo = splitted[0];
+			String autore = splitted[1];
+			Double durata = Double.parseDouble(splitted[2]);
+			
+			Brano brano = new Brano(titolo, autore, durata);
+			this.brani.add(brano);
+		}
+	}
+
+	public ArrayList<Brano> getBrani() {
+		return brani;
+	}
+	
+	public void stampaBraniPL() {
+		for (Brano brano : brani) {
+			System.out.println(brano.stampa());
+		}
+	}
+}
