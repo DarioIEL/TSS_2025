@@ -1,6 +1,6 @@
 package model;
 
-public class Brano {
+public class Brano implements Comparable<Brano>{
 
 	private String titolo;
 	private String autore;
@@ -47,6 +47,29 @@ public class Brano {
 	public void setDurata(double durata) {
 		this.durata = durata;
 	}
+	@Override
+	public String toString() {
+		return "Brano [titolo=" + titolo + ", autore=" + autore + ", durata=" + durata + "]";
+	}
+	
+	@Override
+	//ATT: questo metodo, implementato perché utilizzo l'interfaccia, restituisce 0 quando i due oggetti paragonati sono identici. >0 o <0 quando i due oggetti sono diversi
+	public int compareTo(Brano b) {
+		
+		int confrontoAutore = this.autore.compareTo(b.autore);
+		if(confrontoAutore == 0) {
+			int confrontoTitolo = this.titolo.compareTo(b.titolo);
+			if(confrontoTitolo == 0) {
+				return Double.compare(this.durata, b.durata);
+			}else {
+				return confrontoTitolo;
+			}
+		}
+		return confrontoAutore;
+	}
+	
+	
+	
 	
 	
 	

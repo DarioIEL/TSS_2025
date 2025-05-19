@@ -61,13 +61,16 @@ public class PlayListCtrl {
 			System.out.println("Non sono stato in grado di trovare il file. Controlla la sua posizione");
 			e.printStackTrace();
 		}
-		
-		
 	}
 
 	public ArrayList<Brano> getBrani() {
 		return brani;
 	}
+	
+	public Brano getSingoloBrano(int indice) {
+		return brani.get(indice);
+	}
+	
 	
 	public void stampaBraniPL() {
 		for (Brano brano : brani) {
