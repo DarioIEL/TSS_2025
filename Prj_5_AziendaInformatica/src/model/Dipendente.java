@@ -1,9 +1,9 @@
 package model;
 
-public class Dipendente {
+public abstract class Dipendente {
 
 	public Dipendente() {
-		// TODO Auto-generated constructor stub
+
 	}
 
 }
