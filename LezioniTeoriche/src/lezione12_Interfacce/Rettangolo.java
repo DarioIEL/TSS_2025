@@ -24,4 +24,6 @@ public class Rettangolo implements FormaCalcolabile{
 		return 2 * (this.altezza + this.lunghezza);
 	}
 
+
+	
 }
