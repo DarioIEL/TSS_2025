@@ -26,7 +26,7 @@ console.log("La somma vale " + (num1 + num2));
 let num3 = "25.3";
 let num4 = "6";
 
-let somma = Number(num3) + parseFloat(num4); //256
+let somma = Number(num3) + Number(num4); //256
 let prodotto = num3 * num4;
 let differenza = num3 - num4;
 let quoziente = num3 / num4;
@@ -45,6 +45,7 @@ console.log(quoziente);
 
 
 //ARRAY sono molto simili alla collection ArrayList di JAVA
+// let libri = new Array("Libro1", "Libro2");
 
 let studenti = ["Claudio", "Vania", "Ludovica", "Andrea", "Glenda", "Edoardo", "Nicolò", "Sahar", "Ivan", "Jacopo", 4, true];
 
@@ -94,3 +95,9 @@ console.log(find);
 //metodi per unire gli array e spaccare
 let parole = ["Ciao", "Smartphone", "Mare", "Spiaggia", "Sole"];
 console.log(parole.join("_"));
+
+
+let nome = "Dario";
+let numLettere = nome.length;
+let emon = nome.split("").reverse().join("");
+console.log(emon);

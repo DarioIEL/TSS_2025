@@ -5,6 +5,7 @@ let studenti = ["Claudio", "Vania", "Ludovica", "Andrea", "Glenda", "Edoardo", "
 let demo = document.getElementById("demo");
 console.log(demo); 
 
+
 //Con innerHTML cambio la prop del testo al suo interno. Praticamente leggo e scrivo testo + html con questa prop
 // demo.innerHTML = "<li>" + studenti[0] + "</li>";
 for(let i = 0; i < studenti.length; i++){
