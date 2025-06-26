@@ -7,6 +7,7 @@ let listaAlbum = document.querySelector("#listaAlbum"); //PARENT NODE
 let li = document.createElement("li"); //CHILD NODE
 li.textContent = "Pokerface - Lady Gaga"; //<li>Pokerface - Lady Gaga</li>
 
+
 listaAlbum.appendChild(li);
 
 //Elimino un elemento dalla lista della spesa
