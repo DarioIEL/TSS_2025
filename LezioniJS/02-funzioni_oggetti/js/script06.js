@@ -20,6 +20,3 @@ let objJSON = '{"nome": "Paolo Verdi", "corso": "Sviluppo software", "eta": 30}'
 
 let objOBJ = JSON.parse(objJSON);
 console.log(objOBJ);
-
-
-

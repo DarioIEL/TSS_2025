@@ -20,7 +20,7 @@ localStorage.setItem("studente", JSON.stringify(studente));
 
 
 // //recupero lo studente dalla localStorage
-let studenteConnesso =JSON.parse(localStorage.getItem("studente")); //ATT: sto recuperando una string
+let studenteConnesso = JSON.parse(localStorage.getItem("studente")); //ATT: sto recuperando una string
 console.log(studenteConnesso);
 
 let demo = document.querySelector("#demo");

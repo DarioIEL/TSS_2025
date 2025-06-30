@@ -82,3 +82,12 @@ function inviaForm(event){
 
 mioForm.addEventListener("submit", inviaForm, false);
 
+let users = [
+    new User("Dario", "admin", ["1", "2"]),
+    new User("Anna", "ann", ["1", "2"]),
+    new User("Laura", "lau", ["1", "2"]),
+    new User("Paolo", "pao", ["1", "2"]),
+    new User("Maria", "mar", ["1", "2"]),
+]
+
+localStorage.setItem("utenti", JSON.stringify(users));
