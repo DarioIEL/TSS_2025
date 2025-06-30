@@ -189,4 +189,4 @@ ls -l, id, stat
 
 ---
 
-**Buon lavoro! 🐧**
+**Buon lavoro!**
