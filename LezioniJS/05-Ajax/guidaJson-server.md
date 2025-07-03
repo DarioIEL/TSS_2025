@@ -61,5 +61,10 @@ Settare Execution Policy
 2. Digitare: Set-ExecutionPolicy Unrestricted -> premi Invio
 3. Digitare T per "a tutti" -> Premi Invio 
 
+
+### Problemi con variabili d'ambiente
+Controlla se esiste in PATH la var d'ambiente .../npm
+
+
 # Alternativa
 mock.api

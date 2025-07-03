@@ -3,11 +3,13 @@ let demo = document.querySelector("#demo");
 
 const urlEP = "https://reqres.in/api/users?page=1";
 
+
 //Se nella fetch non inserisco un configuration object, di default sto eseguendo un metodo GET
 fetch(urlEP, {
     headers: {"x-api-key" : "reqres-free-v1"}
 })
 .then(data => {
+    console.log(data);
     return data.json()
 })
 .then(response => {
@@ -25,7 +27,10 @@ fetch(urlEP, {
     response.data.forEach(persona => {
         creaCard(persona);
     });
+   
 })
+
+
 
 class Persona{
     constructor(first_name, last_name, email, avatar){

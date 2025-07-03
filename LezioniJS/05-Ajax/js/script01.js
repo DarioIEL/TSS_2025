@@ -6,7 +6,6 @@ let urlEndpoint = "https://pokeapi.co/api/v2/pokemon/bulbasaur/";
 let nomePokemon = "";
 
 try {
-    
     //fetchAPI che esegue una chiamata esterna
     fetch(urlEndpoint)
     //in questo primo then gestisco la chiamata al server e la sua risposta
