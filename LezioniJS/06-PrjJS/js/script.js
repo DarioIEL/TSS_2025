@@ -127,6 +127,8 @@ function addInCarrello(viaggio){
             console.log(data);
             location.href = "http://127.0.0.1:5500/06-PrjJS/carrello.html"
         }, 1500);
+
+
     })
 
 
