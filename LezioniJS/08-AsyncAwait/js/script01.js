@@ -8,7 +8,6 @@ async function getUsers(){
     } catch (error) {
         console.error("Non riesco a recuperare i dati", error);
         throw error;
-
     }
 }
 
