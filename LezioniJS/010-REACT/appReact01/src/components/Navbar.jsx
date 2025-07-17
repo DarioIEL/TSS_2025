@@ -1,6 +1,4 @@
 function Navbar(){
-
-
     return (
         <>
         <ul>
