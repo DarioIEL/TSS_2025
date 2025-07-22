@@ -24,7 +24,7 @@ function Card({title, description, imgURL,  isSpotted: isSpottedValue, children}
               </div>
 
               <div>
-                <button onClick={() => setSpotted( isSpotted => {!isSpotted})}>
+                <button onClick={() => setSpotted( isSpotted => !isSpotted)}>
                     Avvistato/NO
                 </button>
                

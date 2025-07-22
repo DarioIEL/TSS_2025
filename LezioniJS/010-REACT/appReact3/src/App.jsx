@@ -41,13 +41,10 @@ function App() {
   ]
   
 
-
-  
   return (
     <>
 
-
-      <h1>App BIRD WATCHING</h1>
+    <h1>App BIRD WATCHING</h1>
 
     <div className="card-container">
      
@@ -67,21 +64,7 @@ function App() {
     <div className="clearfix"></div>
     <hr />
 
-    <h2>Raccolta avvistati</h2>
-    <div className="card-container">
-
-      {birds
-      .filter(bird => bird.isSpotted)
-      .map(bird => (
-        <Card
-        key={bird.id}
-        title={bird.nome}
-        imgURL={bird.imgURL}
-        description={bird.description}
-        isSpotted={bird.isSpotted}>
-        </Card>
-      ))}
-    </div>
+    
     </>
     )
 }
