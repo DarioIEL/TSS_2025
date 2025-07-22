@@ -10,7 +10,7 @@ import ProvaState from '../components/ProvaState';
 function App() {
   const [count, setCount] = useState(99);
 
-  const birds = [
+  const [birds, modBirds] = useState([
     {
       id: 0,
       nome: "Tucano",
@@ -43,7 +43,7 @@ function App() {
       isSpotted: true,
       comment: "We we"
     }
-  ]
+  ])
   
 
   function salutaInConsole(){
@@ -62,6 +62,13 @@ function App() {
     console.log(event);
   }
 
+  const toggleIsSpotted = (birdID) =>{
+    modBirds(prevBird => 
+      prevBird.map(bird => 
+        bird.id == birdID ? {...bird, isSpotted: !bird.isSpotted} : bird
+      )
+    )
+  }
   return (
     <>
 
@@ -99,7 +106,8 @@ function App() {
         title={bird.nome}
         imgURL={bird.imgURL}
         description={bird.description}
-        isSpotted={bird.isSpotted}>
+        isSpotted={bird.isSpotted}
+        onToggleSpotted = {() => toggleIsSpotted(bird.id)}>
         {bird.comment}
         </Card>
       )) }

@@ -57,9 +57,14 @@ import './Card.css'
 
 //in questa versione utilizzerà una parola chiave: "children" per poter raccogliere ciò che scrivo a mano nel parent all'interno del selettore child. Quindi children non è una semplice prop, bensì diventa parola chiave
 
-function Card({title, description, imgURL, children, isSpotted: isSpottedValue}){
+function Card({title, description, imgURL,  isSpotted: isSpottedValue, onToggleSpotted, children}){
 
     const [isSpotted, setSpotted] = useState(isSpottedValue);
+    
+    const handleSpotted = () =>{
+        setSpotted(!isSpotted);
+        onToggleSpotted();
+    }
 
     return(
      <div className= {`card ${isSpotted ? "bgGreen": "bgRed"}`}>
@@ -77,9 +82,12 @@ function Card({title, description, imgURL, children, isSpotted: isSpottedValue})
               </div>
 
               <div>
-                <button onClick={() => setSpotted( isSpotted => !isSpotted)}>
+                {/* <button onClick={() => setSpotted( isSpotted => {!isSpotted})}>
                     Avvistato/NO
-                </button>
+                </button> */}
+                {/* <button onClick={onToggleSpotted}>Avvistato davvero? </button> */}
+                
+                <button onClick={handleSpotted}>Avvistato / no</button>
               </div>
           </div>
     )
