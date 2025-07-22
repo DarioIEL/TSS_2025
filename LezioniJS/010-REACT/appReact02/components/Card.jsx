@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './Card.css'
 
 
@@ -56,9 +57,12 @@ import './Card.css'
 
 //in questa versione utilizzerà una parola chiave: "children" per poter raccogliere ciò che scrivo a mano nel parent all'interno del selettore child. Quindi children non è una semplice prop, bensì diventa parola chiave
 
-function Card({title, description, imgURL, children, isSpotted}){
+function Card({title, description, imgURL, children, isSpotted: isSpottedValue}){
+
+    const [isSpotted, setSpotted] = useState(isSpottedValue);
+
     return(
-     <div className="card">
+     <div className= {`card ${isSpotted ? "bgGreen": "bgRed"}`}>
               <div className="card-image">
                   <img src={imgURL} alt="" />
               </div>
@@ -70,6 +74,12 @@ function Card({title, description, imgURL, children, isSpotted}){
 
               <div>
                 <span>{isSpotted ? "Avvistato": "Non avvistato"}</span>
+              </div>
+
+              <div>
+                <button onClick={() => setSpotted( isSpotted => !isSpotted)}>
+                    Avvistato/NO
+                </button>
               </div>
           </div>
     )

@@ -13,3 +13,11 @@
     padding: 20px;
     box-sizing: border-box;
 }
+
+.bgGreen{
+    background-color: lightgreen;
+}
+
+.bgRed{
+    background-color: lightcoral;
+}
