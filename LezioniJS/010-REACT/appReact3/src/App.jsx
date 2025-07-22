@@ -1,11 +1,12 @@
-
+import { useState } from 'react'
 import Card from '../components/Card'
+import CardForm from '../components/CardForm'
 import './App.css'
 
 function App() {
 
 
-  const birds = [
+  const [birds, setBirds] = useState([
     {
       id: 0,
       nome: "Tucano",
@@ -38,35 +39,44 @@ function App() {
       isSpotted: true,
       comment: "We we"
     }
-  ]
-  
+  ]);
+
+
+  // Questa funzione usata nel prop di CardForm prende un newBird in ingresso. Questo newBird vive nel child non nel parent
+  const addBird = (newBird) => {
+      setBirds([...birds, newBird]);
+  }
 
   return (
     <>
 
-    <h1>App BIRD WATCHING</h1>
+      <h1>App BIRD WATCHING</h1>
 
-    <div className="card-container">
-     
-      {birds.map(bird => (
-        <Card
-        key={bird.id}
-        title={bird.nome}
-        imgURL={bird.imgURL}
-        description={bird.description}
-        isSpotted={bird.isSpotted}>
-        {bird.comment}
-        </Card>
-      )) }
+      <div className="card-container">
 
-    </div>
 
-    <div className="clearfix"></div>
-    <hr />
+        {birds.map((bird) => (
+          <Card
+            key={bird.id}
+            title={bird.nome}
+            imgURL={bird.imgURL}
+            description={bird.description}
+            isSpotted={bird.isSpotted}>
+            {bird.comment}
+          </Card>
+        ))}
 
-    
+      </div>
+
+      <div className="clearfix"></div>
+      <hr />
+
+      <div className="card-container">
+        {/*       propCHILD = propParent */}
+        <CardForm addBird={addBird}></CardForm>
+      </div>
     </>
-    )
+  )
 }
 
 export default App
