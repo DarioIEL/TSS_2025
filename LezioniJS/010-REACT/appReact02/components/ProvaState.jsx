@@ -20,11 +20,13 @@ function ProvaState(){
     //Controllo lo state di un oggetto
     const [user, setUser] = useState({nome: "Anna", eta: 25});
 
+   
     const updateUser = () =>{
         let updatedUser = {...user, nome: "Marco"}; //operatore spread su oggetti mi permette di modificare una sola prop senza riscrivere integralmente tutto l'oggetto. 
         setUser(updatedUser);
         console.log(user);
     }
+
 
 
     return(
