@@ -1,0 +1,30 @@
+{
+    "users": [
+        {
+            "id": 0,
+            "nome": "Dario",
+            "cognome": "Mennillo",
+            "eta": 36,
+            "professione": "docente"
+        },
+         {
+            "id":1,
+            "nome": "Anna",
+            "cognome": "Rossi",
+            "eta": 30,
+            "professione": "studente"
+        }
+    ],
+
+    "msgs": [
+        {
+            "id":0,
+            "txt": "Ciao, come stai ?"
+        },
+        {
+            "id":1,
+            "txt": "Tutto bene, grazie"
+        }
+    
+    ]
+}

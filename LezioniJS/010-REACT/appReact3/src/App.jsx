@@ -3,6 +3,7 @@ import Card from '../components/Card'
 import CardForm from '../components/CardForm'
 import FormProva from '../components/FormProva'
 import CardFormVero from '../components/CardFormVero'
+import TestFetching from '../components/TestFetching'
 
 import './App.css'
 
@@ -95,6 +96,11 @@ function App() {
       <hr />
       <div className="card-container">
           <CardFormVero addBird={addBird}></CardFormVero>
+      </div>
+
+      <hr />
+      <div className="card-container">
+        <TestFetching></TestFetching>
       </div>
     </>
   )
